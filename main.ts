@@ -1,5 +1,5 @@
-// News-image entry (Node 22, standard library only): the image is the entry.jpg
-// beside this file, and the program copies it to /output/entry.jpg.
+// News-image entry (Node 22, standard library only): the image is the entry.png
+// beside this file, and the program copies it to /output/entry.png.
 // The gate takes a whole image of at most 1 MiB and 1024 by 1024 pixels, and the
 // judge sees exactly the bytes copied. The program runs twice and both runs
 // write the same bytes, because it only copies a fixed file.
@@ -12,4 +12,4 @@ import { join } from 'node:path';
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 mkdirSync(outDir, { recursive: true });
-copyFileSync(new URL('./entry.jpg', import.meta.url), join(outDir, 'entry.jpg'));
+copyFileSync(new URL('./entry.png', import.meta.url), join(outDir, 'entry.png'));
